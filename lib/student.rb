@@ -49,6 +49,9 @@ end
     student
   end
   
-  def 
+  def update
+    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.album,self.id)
+  end 
 
 end
