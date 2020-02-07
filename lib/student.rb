@@ -61,7 +61,7 @@ end
     self.new(id, name, grade)
   end
 
-  def self.find_by_name_(name)
+  def self.find_by_name(name)
     sql = <<-SQL
       SELECT *
       FROM students
