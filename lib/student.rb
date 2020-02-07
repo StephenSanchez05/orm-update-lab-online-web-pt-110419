@@ -54,6 +54,11 @@ end
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end 
   
-  def self.new_from_db()
+  def self.new_from_db(student)
+    id = student[0]
+    name = student[1]
+    grade = student[2]
+    self.new(id, name, grade)
+  end
 
 end
